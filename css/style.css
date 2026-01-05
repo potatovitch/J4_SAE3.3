@@ -1,0 +1,192 @@
+.root {
+    -fx-background-image: url("../assets/textures/background.png");
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-background-size: cover;
+    -fx-font-family: Calibri;
+}
+/*###############[BOUTON_STYLE]#############"*/
+.button {
+    -fx-font-family: "PixelGameFont";
+    -fx-font-size: 18px;
+    -fx-text-fill: #f0f0f0;
+    -fx-base-color: #7a7a7a;
+    -fx-background-radius: 20;
+    -fx-border-radius: 20;
+    -fx-background-color:
+            linear-gradient(#ffffff80, #00000040),   /* highlight + ombre interne */
+            #000000,                                 /* bordure noire 1px */
+            -fx-base-color;                          /* fond du bouton */
+    -fx-background-insets: 0, 1, 2;                 /* effet pixel */
+    -fx-padding: 8 16;
+}
+
+.button:hover {
+    -fx-base-color: derive(#7a7a7a, 20%);
+    -fx-background-color:
+            linear-gradient(#ffffff80, #00000040),
+            #000000,
+            -fx-base-color;
+}
+
+.button:pressed {
+    -fx-translate-y: 1;
+    -fx-background-color:
+            linear-gradient(#00000060, #00000060),
+            #000000,
+            derive(#7a7a7a, -20%);
+}
+
+.button:disabled {
+    -fx-opacity: 0.55;
+    -fx-background-color:
+            linear-gradient(#44444460, #22222260),
+            #000000,
+            derive(#7a7a7a, -40%);
+}
+
+#bouton_vert {
+    -fx-base-color: #4cb050;
+}
+
+#bouton_rouge {
+    -fx-base-color: #d95e74;
+}
+
+#bouton_orange {
+    -fx-base-color: #f2a43b;
+}
+/*#####################################"*/
+
+#inscription{
+    -fx-fill: darkslateblue;
+    -fx-font-weight: bold;
+    -fx-font-size: 18;
+}
+#inscription:hover {:
+    -fx-underline;
+    -fx-fill: #504186;
+    -fx-cursor: hand;
+}
+#inscription:pressed{
+    -fx-effect: dropshadow(gaussian, #3f2e73,1,0,0,1);
+    -fx-translate-y: 1;
+    -fx-translate-x: 1;
+}
+
+
+
+#ScenePause {
+    -fx-background-color: rgba(0, 0, 0, 0.85); /* Fond sombre */
+}
+
+.menu-box {
+    -fx-background-color: #2b2b2b; /* Boîte grise opaque */
+    -fx-border-color: white;
+    -fx-border-width: 2px;
+    -fx-background-radius: 15;
+    -fx-border-radius: 15;
+    -fx-effect: dropshadow(three-pass-box, black, 30, 0.5, 0, 0);
+}
+
+.pause-titre {
+    -fx-fill: white;
+    -fx-font-size: 36px;
+    -fx-font-weight: bold;
+}
+
+.pause-titre {
+    -fx-text-fill: white;
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+}
+
+
+
+/* text dans div */
+#textLoginConn, #textMPDConn, #textPseudoInsc, #textMDPInsc,#textConfInsc, #textLargeur, #textHauteur, #textMur, #textDistance, #textBrouillard, #textBiome{
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-fill: white !important;
+}
+
+/* champs */
+#champsLargeur, #champsHauteur, #champsTauxMur,
+#champLogin, #champsMDP, #champsMDPConf,
+#champModifPseudo, #champsAncienmdp, #champsNouveaumdp, #champsConfirmmdp, #champsDistance{
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    /* -fx-background-color:  rgba(255,255,255,0.5); */
+    -fx-background-color:  rgba(255,255,255,0.9);
+}
+
+#champLogin, #champsMDP, #champsMDPConf,
+#champModifPseudo, #champsAncienmdp, #champsNouveaumdp, #champsConfirmmdp{
+    -fx-background-radius: 12;
+    -fx-radius: 12;
+}
+
+#champLogin, #champsMDP :hover{
+    /* -fx-background-color: rgba(255,255,255,0.7); */
+}
+
+#champLogin, #champsMDP:focused{
+    /* -fx-background-color: rgba(255,255,255,1.0); */
+}
+
+#validerModifPseudo, #validerModifmdp{
+    -fx-background-radius: 10;
+    -fx-radius: 10;
+}
+
+/* div */
+#stackPane, #vBoxConn, #vBoxIns, #texteRegles, #vboxLibre{
+    -fx-background-color: rgba(0,0,0,0.7);
+    -fx-background-radius: 12;
+    -fx-border-color: white;
+    -fx-border-radius: 12;
+    -fx-padding:20px;
+    -fx-border-width: 2px;
+}
+
+#texteRegles{
+    -fx-font-size: 24;
+    -fx-font-weight: bold;
+}
+
+#noCompte{
+    -fx-fill: white;
+    -fx-font-weight: bold;
+}
+
+#textHintConnexion{
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+
+#tabScores{
+    -fx-background-color: rgba(0,0,0,0.7);
+    -fx-background-radius: 12;
+    -fx-border-color: white;
+    -fx-border-radius: 12;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-border-width: 2px;
+}
+
+
+/* titres */
+#titrePrin, #titreRegle, #titreScore, #titreConn, #titreInsc, #titreCompte, #titreLibre, #titreProg{
+    -fx-font-size: 36px;
+    -fx-font-weight: bold;
+}
+
+.selectedMode {
+    -fx-background-color: #d9534f; /* rouge */
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.selectedMode:hover{
+    -fx-background-color: #9b3939; /* rouge */
+}

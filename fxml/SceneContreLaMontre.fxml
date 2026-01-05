@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="J4.sae_labyrinthe.controleur.SceneContreLaMontreControleur"
+            stylesheets="@../css/style.css"
+            prefWidth="600" prefHeight="400">
+
+    <top>
+        <VBox alignment="CENTER" spacing="10">
+            <padding>
+                <Insets top="20"/>
+            </padding>
+            <Text text="Contre-la-montre"
+                  style="-fx-font-size: 32px; -fx-font-weight: bold; -fx-fill: #333;"/>
+        </VBox>
+    </top>
+
+    <center>
+        <VBox spacing="30" alignment="CENTER">
+
+
+            <VBox spacing="15" alignment="CENTER">
+                <Button text="JOUER"
+                        prefWidth="250"
+                        prefHeight="50"
+                        style="-fx-font-size: 16px;"
+                        onMouseClicked="#jouerContreLaMontre"/>
+
+                <Button text="PARAMETRES DE JEU"
+                        prefWidth="250"
+                        style="-fx-font-size: 16px;"
+                        onMouseClicked="#ouvrirParametres"/>
+
+                <Button text="RETOUR AU MENU"
+                        prefWidth="250"
+                        style="-fx-font-size: 16px;"
+                        onMouseClicked="#revenirMenu"/>
+            </VBox>
+        </VBox>
+    </center>
+
+    <padding>
+        <Insets top="20" bottom="40" left="40" right="40"/>
+    </padding>
+
+</BorderPane>
